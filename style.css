@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* En-tete */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 28px;
+}
+
+.header h1 span {
+    color: #667eea;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info .username {
+    color: #667eea;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-danger {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #ee5a24;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: #00b894;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #00a381;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: white;
+}
+
+.btn-sm {
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+/* Formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+}
+
+/* Page de connexion/inscription */
+.auth-box {
+    max-width: 450px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.auth-box h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.auth-box h2 span {
+    color: #667eea;
+}
+
+.auth-box .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-box .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+}
+
+.auth-box .links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-box .links a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-box .links a:hover {
+    text-decoration: underline;
+}
+
+/* Liste des sujets */
+.topic-list {
+    list-style: none;
+}
+
+.topic-item {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+    border-left: 4px solid #667eea;
+}
+
+.topic-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.topic-item h3 {
+    margin-bottom: 8px;
+}
+
+.topic-item h3 a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topic-item h3 a:hover {
+    color: #667eea;
+}
+
+.topic-item .topic-meta {
+    color: #777;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.topic-item .topic-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.topic-item .topic-excerpt {
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Vue d'un sujet */
+.topic-view {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.topic-view h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.topic-view .topic-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.8;
+    color: #444;
+    margin: 15px 0;
+}
+
+.topic-view .topic-meta {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Reponses */
+.reply-item {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #00b894;
+}
+
+.reply-item .reply-content {
+    margin: 10px 0;
+    line-height: 1.8;
+    color: #444;
+}
+
+.reply-item .reply-meta {
+    color: #777;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reply-item .reply-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Section reponse */
+.reply-section {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.reply-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Alertes */
+.alert {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Actions dans un sujet */
+.topic-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #777;
+}
+
+.empty-state h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.empty-state p {
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .user-info {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .topic-item .topic-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .auth-box {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .reply-item .reply-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
